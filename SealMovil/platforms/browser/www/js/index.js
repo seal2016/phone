@@ -1,6 +1,6 @@
  var onSuccess = function(position) {
 
-			var targetUrl = "http://200.48.64.114:8082/consultawebsielse?lat="+position.coords.latitude+"&lon="+position.coords.longitude;
+			var targetUrl = "https://200.48.64.123/consultawebsielse?lat="+position.coords.latitude+"&lon="+position.coords.longitude;
 			
 			//var targetUrl = "http://localhost:64019?lat="+position.coords.latitude+"&lon="+position.coords.longitude;
 			var bkpLink = document.getElementById("bkpLink");
@@ -26,7 +26,7 @@
 	
     function onError(error) {
 
-			var targetUrl = "http://200.48.64.114:8082/consultawebsielse?lat=-16.401057&lon=-71.539434";
+			var targetUrl = "http://200.48.64.123/consultawebsielse?lat=-16.401057&lon=-71.539434";
 			
 			//var targetUrl = "http://localhost:64019?lat=-16.401057&lon=-71.539434";
  var bkpLink = document.getElementById("bkpLink");
