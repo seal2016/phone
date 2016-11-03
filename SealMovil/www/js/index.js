@@ -1,6 +1,6 @@
  var onSuccess = function(position) {
 
-     var targetUrl = "https://200.48.64.123/consultawebsielse?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude;
+			var targetUrl = "http://200.48.64.114:8082/consultawebsielse?lat="+position.coords.latitude+"&lon="+position.coords.longitude;
 			
 			//var targetUrl = "http://localhost:64019?lat="+position.coords.latitude+"&lon="+position.coords.longitude;
 			var bkpLink = document.getElementById("bkpLink");
@@ -12,14 +12,21 @@
         
     };
 
-   
+    // onError Callback receives a PositionError object
+    /*
+	var targetUrl = "http://localhost:64019?lat=-16.401057&lon=-71.539434"; 
+			var bkpLink = document.getElementById("bkpLink");
+			bkpLink.setAttribute("href", targetUrl);
+			bkpLink.text = targetUrl;
+			window.location.replace(targetUrl);
+	*/
 	
 	
 	
 	
     function onError(error) {
 
-        var targetUrl = "https://200.48.64.123/consultawebsielse?lat=-16.401057&lon=-71.539434";
+			var targetUrl = "http://200.48.64.114:8082/consultawebsielse?lat=-16.401057&lon=-71.539434";
 			
 			//var targetUrl = "http://localhost:64019?lat=-16.401057&lon=-71.539434";
  var bkpLink = document.getElementById("bkpLink");
@@ -52,8 +59,12 @@ var app = {
 		if(networkState == Connection.NONE){
 			document.getElementById("spinner").innerHTML = "No tiene conexión a internet";
 		}
-		else{		
-			navigator.geolocation.getCurrentPosition(onSuccess, onError);			
+		else{
+			var targetUrl = "http://200.48.64.114:8082/consultawebsielse?lat=-16.401057&lon=-71.539434";			
+			var bkpLink = document.getElementById("bkpLink");
+			bkpLink.setAttribute("href", targetUrl);
+			bkpLink.text = targetUrl;
+			window.location.replace(targetUrl);
 		}
         
         

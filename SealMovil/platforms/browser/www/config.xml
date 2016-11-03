@@ -18,8 +18,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-intent href="*://*200.48.64.123/consultawebsielse/*" />
-    <allow-navigation href="https://200.48.64.123/consultawebsielse" />
+    <allow-intent href="*://*200.48.64.114:8082/consultawebsielse/*" />
+    <allow-navigation href="http://200.48.64.114:8082/consultawebsielse" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 </widget>
